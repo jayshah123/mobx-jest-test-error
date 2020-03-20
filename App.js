@@ -7,14 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, ScrollView, View, Text} from 'react-native';
 
 import {
   Header,
@@ -24,13 +17,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import ColorComponent from './ColorComponent';
-import { Provider } from 'mobx-react';
+import {Provider} from 'mobx-react';
 import ColorStore from './ColorStore';
 
 const App: () => React$Node = () => {
   return (
     <Provider ColorStore={new ColorStore()}>
-      <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
